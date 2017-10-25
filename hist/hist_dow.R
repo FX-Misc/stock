@@ -9,6 +9,9 @@ dow.prices<-dow[[dow.name]]
 names(dow.prices)<-c("Open","High","Low","Close","Volume","Adjusted")
 data<-as.data.frame(dow.prices)
 
+codes<-rep(code,nrow(data))
+data$Code<-codes
+
 fname<-paste("/mnt/stock/data/hist/daily/",code,".txt",sep="")
 write.table(data,fname,quote=F,col.names=F,row.names=T,append=F,sep="\t")
 

@@ -15,7 +15,7 @@ def get_stockdata(code,sy,sm,sd,ey,em,ed,tm):
     ret,plen=get_stockdata_page(code,sy,sm,sd,ey,em,ed,tm,p)
     ss=ss+ret
     p=p+1
-  f=open("/mnt/stock/data/hist/daily/"+code+".txt","w")
+  f=open("/mnt/data/ystock/daily/"+code+".txt","w")
   #f=open(code+".txt","w")
   f.write(ss)
   f.close()
@@ -49,7 +49,7 @@ def get_stockdata_page(code,sy,sm,sd,ey,em,ed,tm,p):
         st=st+to_ymd(s)+"\t"
       st=st+code
       ret=ret+st+"\n"
-  time.sleep(1)
+  time.sleep(5)
   #print "plen="+str(plen)+"\n"
   #print ret+"\n"
   return ret,plen
@@ -62,7 +62,7 @@ def get_stockdata_all(sy,sm,sd,ey,em,ed,tm):
   #for line in lines:
   #  ay=line.split("\t")
   #  print ay[0]
-  for code in range(1321,9997):
+  for code in range(1301,9999):
     try:
       get_stockdata(str(code),sy,sm,sd,ey,em,ed,tm)
     except:
@@ -71,4 +71,4 @@ def get_stockdata_all(sy,sm,sd,ey,em,ed,tm):
 
 if __name__ == '__main__':
   #get_stockdata("9984","2012","01","01","2014","01","01","d")
-  get_stockdata_all("2001","01","01","2016","12","31","d")
+  get_stockdata_all("2017","01","01","2017","07","31","d")

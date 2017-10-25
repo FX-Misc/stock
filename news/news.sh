@@ -4,7 +4,9 @@
 #PBS -l ncpus=1
 #PBS -q SINGLE
 
+if [ "${PBS_O_WORKDIR}" != "" ];then
 cd ${PBS_O_WORKDIR}
+fi
 source ~/.bashrc
 
 categories="
@@ -54,6 +56,6 @@ kyuoki
 
 
 for cate in $categories;do
-  ruby news.rb "/mnt/data/news" $cate  
+  ruby ./news.rb "/mnt/data/news" $cate  
 done
 

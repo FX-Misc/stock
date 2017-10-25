@@ -2,15 +2,16 @@
 
 
 codes="
-DOW
-GSPC
-IXIC
-DAX
-FTSE
+^N225
+^DJI
+^GSPC
+^IXIC
+^FTSE
 JPY=X
 GBPUSD=X
 EURUSD=X
-TNX
+^VIX
+^TNX
 GC=F
 CL=F
 "

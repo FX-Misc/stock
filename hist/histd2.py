@@ -70,10 +70,9 @@ def get_stockdata_all(sy,sm,sd,ey,em,ed,tm):
       print traceback.format_exc()
 
 if __name__ == '__main__':
-  #get_stockdata("9984","2012","01","01","2014","01","01","d")
-#  get_stockdata_all("2001","01","01","2016","12","31","d")
-  get_stockdata("998407","2001","01","01","2016","12","31","d")
-  get_stockdata("998405","2001","01","01","2016","12","31","d")
-  get_stockdata("23337","2001","01","01","2016","12","31","d")
-  for code in range(1301,1321):
-    get_stockdata(str(code),"2001","01","01","2016","12","31","d")
+#  get_stockdata("998407","2001","01","01","2016","12","31","d")
+#  get_stockdata("998405","2001","01","01","2016","12","31","d")
+#  get_stockdata("23337","2001","01","01","2016","12","31","d")
+   get_stockdata("9997","2001","01","01","2016","12","31","d")
+#  for code in range(1301,1321):
+#    get_stockdata(str(code),"2001","01","01","2016","12","31","d")
